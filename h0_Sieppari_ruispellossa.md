@@ -14,7 +14,7 @@ esim 10:23:05.391105 IP archlinux.36020 > lb-140-82-121-3-fra.github.com.https: 
 Tämän jälkeen näemme mitä paketteja lähetetään.  
 esimimerkiksi githubiin lähetetyissä paketeissa:  
 Esinmmäisen paketin Flags `[P.]` on `Push Aknowledgement` paketti.  
-Tähän github vastaa `[.]` joka on `Aknowledgement` paketti. 
+Tähän github vastaa `[.]` joka on `Aknowledgement` paketti.  
 Nämä näyttävät meille sen, että koneelta lähtee pyyntö githubiin ja koska verkko on toiminnassa saamme vastauksen githubilta.
 Tämän jälkeen näkyy sekvenssi numero joka on muodossa `ensimmäinen:viimeinen`  
 esim.  
