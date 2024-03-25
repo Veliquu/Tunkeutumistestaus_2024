@@ -15,7 +15,7 @@ Tämän jälkeen näemme mitä paketteja lähetetään.
 esimimerkiksi githubiin lähetetyissä paketeissa:  
 Esinmmäisen paketin Flags `[P.]` on `Push Aknowledgement` paketti.  
 Tähän github vastaa `[.]` joka on `Aknowledgement` paketti.  
-Nämä näyttävät meille sen, että koneelta lähtee pyyntö githubiin ja koska verkko on toiminnassa saamme vastauksen githubilta.
+Nämä näyttävät meille sen, että koneelta lähtee pyyntö githubiin ja koska verkko on toiminnassa saamme vastauksen githubilta.  
 Tämän jälkeen näkyy sekvenssi numero joka on muodossa `ensimmäinen:viimeinen`  
 esim.  
 Ensimmäisen paketin sekvenssi numero on `865:904`. Ensimmäinen paketti sai kaksi vastausta joista ensimmäisen tunnistin numero on `865` ja toisen `904`  
