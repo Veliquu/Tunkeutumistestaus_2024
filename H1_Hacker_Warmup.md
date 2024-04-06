@@ -239,7 +239,7 @@ Tämä näytti 3 porttia auki.
   - Portti 9001/tcp, tästä en ole täysin varma, mutta [tämän](https://www.speedguide.net/port.php?port=9001) sivuston selityksen mukaan oletan tämän portin olevan auki, koska se toimii routerina virtuaali koneelle.
 
 ## g) Porttiskannaa kaikki koneesi (localhost) tcp-portit. Analysoi tulokset. (Edellisissä kohdissa mainittuja analyyseja ei tarvitse toistaa, voit vain viitata niihin ja keskittyä eroihin).
-Debianilla ajoin komennon `nmap -p0- localhost`. `-p0-` skannaa kaikki portit lähtien portista 0, koska se voi jostain ihmeen syystä olla välillä kqytössä. 
+Debianilla ajoin komennon `nmap -p0- localhost`. `-p0-` skannaa kaikki portit lähtien portista 0, koska se voi jostain ihmeen syystä olla välillä käytössä.   
 ![allPorts](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/2f4eb5df-87b1-482d-b9fa-93c398a9a7db)
 
 Debianilla ei ollut muita portteja auki, kuin samat mitkä edellisessä kohdassa näkyi.  
