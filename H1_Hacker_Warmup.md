@@ -289,7 +289,7 @@ Kokeilin [namevine.com](https://namevine.com)ia. Tämä löytyi [Bazzel: IntelTe
 Laitoin hakuun siis käyttäjän `Jouolio`joka on siis itsellä ollut käytössq vain Steamsissä.  
 ![namevine](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/6af4a321-a4a5-40b5-8035-2c5384982e6b)
 
-Vaikka käyttäjätunnus on ollut itsellä vain Steamsissa käytössä niin namevine löytää, että nimi on käytössä muuallakin (Twitter, Facebook, Youtube yms). Sivusto antaa myps haetun nimen perusteella domain nimi ehdotuksia.
+Vaikka käyttäjätunnus on ollut itsellä vain Steamsissa käytössä niin namevine löytää, että nimi on käytössä muuallakin (Twitter, Facebook, Youtube yms). Sivusto antaa myös haetun nimen perusteella domain nimi ehdotuksia.
 
 ## Lähteet  
 Debian: [https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)  
