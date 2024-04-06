@@ -290,3 +290,16 @@ Laitoin hakuun siis käyttäjän `Jouolio`joka on siis itsellä ollut käytössq
 ![namevine](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/6af4a321-a4a5-40b5-8035-2c5384982e6b)
 
 Vaikka käyttäjätunnus on ollut itsellä vain Steamsissa käytössä niin namevine löytää, että nimi on käytössä muuallakin (Twitter, Facebook, Youtube yms). Sivusto antaa myps haetun nimen perusteella domain nimi ehdotuksia.
+
+## Lähteet  
+Debian: [https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)  
+nmap: [https://linux.die.net/man/1/nmap](https://linux.die.net/man/1/nmap)  
+PortSwigger: [https://portswigger.net/web-security/sql-injection](https://portswigger.net/web-security/sql-injection)  
+Speed Guide: [https://www.speedguide.net/port.php?port=9001](https://www.speedguide.net/port.php?port=9001)  
+Tero Karvinen: [https://terokarvinen.com/2024/eettinen-hakkerointi-2024/](https://terokarvinen.com/2024/eettinen-hakkerointi-2024/)  
+Tero Karvinen: [https://terokarvinen.com/2020/install-webgoat-web-pentest-practice-target/](https://terokarvinen.com/2020/install-webgoat-web-pentest-practice-target/)  
+
+
+
+
+
