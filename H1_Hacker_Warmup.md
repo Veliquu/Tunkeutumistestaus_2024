@@ -158,7 +158,7 @@ Seuraavassa osiossa lähetettiin HTTP pyyntö painamalla sivustolla olevaa `Go!`
 
 ## d) Ratkaise PortSwigger Labs: [Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data). (Edellyttää ilmaista rekisteröitymistä. Tehtävän voi ratkaista pelkästään selaimen osoitekenttää muokkaamalla.)
 Minulla oli vaikeuksia ymmärtää tätä tehtävää. Luin [tämän](https://portswigger.net/web-security/sql-injection), jotta sain ymmärryksen kuinka SQL injection hyökkäyksen voi tehdä selaimessa.  
-Valitsin ensi kategorian isvustolta.  
+Valitsin ensi kategorian sivustolta.  
 ![categories](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/c2b0cb22-fcbd-4a04-86dd-4746bddf4427)
  
 Tämän jälkeen tarkastelin sivuston url:ää, joka näytti seuraavanlaiselta:  
