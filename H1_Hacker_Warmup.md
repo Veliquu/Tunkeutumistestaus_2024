@@ -95,7 +95,7 @@ aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 Näin sain selville level 3 tehtävän salasanan.
 
 ## b) Asenna [WebGoat](https://terokarvinen.com/2020/install-webgoat-web-pentest-practice-target/) ja kokeile, että pääset kirjautumaan sisään.
-Loitin päivittämällä järjestelmän.
+Aloitin päivittämällä järjestelmän.
 ```bash
 $ sudo pacman -Syu
 ```
@@ -216,7 +216,7 @@ Lopuksi ajoin vielä:
 ```bash
 $ sudo apt update && sudo apt upgrade
 ```
-Näin varmistin kaiken olevan päivitettybä.  
+Näin varmistin kaiken olevan päivitettynä.  
 
 ## f) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (localhost). Analysoi tulokset.  
 Asensin Debian virtuaalikoneelle `nmap`.
