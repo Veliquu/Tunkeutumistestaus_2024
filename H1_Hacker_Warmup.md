@@ -114,7 +114,7 @@ $ sudo ufw enable
 [sudo] password for jesse:
 Firewall is active and enabled on system startup
 ```
-Seuraavaksi asensin WebGoatin
+Seuraavaksi asensin WebGoatin. 8.4.2024 tämä komento on vaarallinen ja se tulisi tehdä ilman `sudo`a.
 ```bash
 $ sudo wget https://terokarvinen.com/2020/install-webgoat-web-pentest-practice-target/webgoat-server-8.0.0.M26.jar
 ```
