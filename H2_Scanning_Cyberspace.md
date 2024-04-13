@@ -33,6 +33,17 @@ Codename:	n/a
 	- avatut ja suodatetut portit lähettävät harvoin vastauksen
 
  ## [KKO 2003:36](https://finlex.fi/fi/oikeus/kko/kko/2003/20030036). Alaikäinen tuomittiin Osuuspankkikeskuksen porttiskannaamisesta, korkeimman oikeuden ratkaisu. 
+ - A yritti murtaa Osuuspankkikeskus-OPK osuuskunnan tietojärjestelmään 23.11.1998.
+ - Porttiskannauksessa A käytti erityistä tietokoneohjelmaa skannatakseen verkon kaikki osoitteet.
+ - Skannaus ei läpäissyt osuuskunnan tietojärjestelmän palomuuria.
+ - Käräjäoikeus hylkäsi syytteen ja korvausvaatimukset, koska ei ollut selvää, kuka oli ottanut yhteyden tietojärjestelmään.
+ - Hovioikeus kuitenkin katsoi, että A oli yrittänyt tietomurtoa ja määräsi hänet maksamaan vahingonkorvauksia.
+ - Korkein oikeus vahvisti hovioikeuden päätöksen, todeten että A oli yrittänyt tunkeutua tietojärjestelmään ja velvoitti hänet korvaamaan aiheuttamansa vahingon kokonaisuudessaan.
+ - A:n tekemä porttiskannaus täytti tietomurron yrityksen tunnusmerkistön.
+ - Vaikka A ei tiennyt skannanneensa osuuskunnan verkon, hän on syyllistynyt tietomurron yritykseen.
+ - A:lle ei sovitella vahingonkorvauksia, koska hän ymmärsi teon vakavuuden ja sen aiheuttaman vahingonvaaran.
+ - Korkein oikeus vahvisti hovioikeuden päätöksen, eikä muuttanut tuomiota.
+
 
  ## Vapaavalintainen läpikävely [0xdf](https://0xdf.gitlab.io/) tai [ippsec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA/videos) (Kannattaa valita helppo; esim "Base Points: Easy")
 
