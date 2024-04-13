@@ -854,7 +854,7 @@ grep: .cache/mozilla/firefox/djprqdvp.default-esr/cache2/entries/5CD931CB7762F2E
 
 ![2024-04-13_23-55](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/62f4804a-c4c1-4a92-a66d-a3323caa8ee3)
 
-Tekstiä tulee paljon ja kaikki apacheen liittyvät maininnat näyttävät olevan json metadataa.
+Tekstiä tulee paljon ja kaikki apacheen liittyvät maininnat näyttävät olevan metadataa.
 
 ## i) Anna esimerkit nmap ajonaikaisista toiminnosta. (man nmap: runtime interaction)
 
