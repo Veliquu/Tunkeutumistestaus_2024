@@ -8,6 +8,17 @@ Description:	Arch Linux
 Release:	rolling
 Codename:	n/a
 ```
+Virtuaalikone: Kali linux
+```bash
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Kali
+Description:    Kali GNU/Linux Rolling
+Release:        2024.1
+Codename:       kali-rolling
+
+```
+
 # x) Lue/katso ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva kustakin artikkelista. Kannattaa lisätä myös jokin oma ajatus, idea, huomio tai kysymys.)
 ## Lyon 2009: Nmap Network Scanning: Chapter 15. Nmap Reference Guide:
 ### [Port Scanning Basics](https://nmap.org/book/man-port-scanning-basics.html) (opettele, mitä tarkoittavat: open, closed, filtered; muuten vain silmäily)
