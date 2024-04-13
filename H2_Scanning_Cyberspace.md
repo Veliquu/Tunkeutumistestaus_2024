@@ -338,8 +338,8 @@ Etsinn kaikki maininnat Apachesta komennollq;
 $ grep -ir apache
 ```
 Grepin jälkeen on `-ir`.
-- i meinaa sitä, että grep ohittaa kirjainkoostumukset kuvioissa ja syöttö tiedoissa, jotta vain kirjaimet, jotka eroavat vain kirjainkoon mukaan, vastaavat toisiaan
-- r (recursive) tekee sen, että grep lukee kaikki tiedostot jokaisesta hakemistosta rekursiivisesti.
+- `-i` meinaa sitä, että grep ohittaa kirjainkoostumukset kuvioissa ja syöttö tiedoissa, jotta vain kirjaimet, jotka eroavat vain kirjainkoon mukaan, vastaavat toisiaan
+- `-r` (recursive) tekee sen, että grep lukee kaikki tiedostot jokaisesta hakemistosta rekursiivisesti.
 
 <details>
 <summary>Output</summary>
