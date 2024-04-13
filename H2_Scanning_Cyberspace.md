@@ -120,4 +120,27 @@ Metasploitablella kun pingataan `www.google.com` saadaan `unknown hos` viesti.
 ![2024-04-13_16-13](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/4e2938cc-be84-4e45-a60a-bcb1c768df7d)
 
 Kalilla saadaan ensin pingillä yhteys googleen, mutta kun irroitin `Network Adapter 1` virtualiboxissa niin pingi ei mene enään läpi.  
-![KaliPing](Pictures/h3/KaliPing.png) 
+![2024-04-13_17-14](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/f6eef9c4-a5dd-4792-848d-d3fa3538ec18)
+
+## d) Etsi Metasploitable porttiskannaamalla (db_nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable. Katso, ettei skannauspaketteja vuoda Internetiin - kannattaa irrottaa koneet netistä skannatessa. Seuraa liikennettä snifferillä.
+Käytin [tätä](https://gist.github.com/fabionoth/ba46407d9cd03144150225715697c47f) ohjeistusta `db_nmap` käytössä.  
+Ensiksi käynnistettiin postgresql -palvelu ja metasploitin msfdb -skripti. Ja tämän jälkeen siirryttiin metasploit kehykseen.
+```bash
+kali ~# sudo systemctl start postgresql.service
+kali ~# sudo msfdb init
+kali ~# msfconsole 
+```
+Ajoin komennon `db_nmap -sn 192.168.66.*`, jossa ip on `DHCP` serverille määritelty ip-osoite avaruus (* meinaa sitä, että komento hakee kaikki ip-osoitteet verkon sisältä).  
+![2024-04-13_17-31](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/edf0b281-b70c-4833-95a4-f3fb31a5221d)
+
+Ylhäällä oli kaksi hostia `192.168.66.2` ja `192.168.66.4`.  
+`ifconfig` komennolla sain selville mikä Kali koneen ip osoite on.  
+![2024-04-13_17-32](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/ce8782f2-9201-44fb-8eae-a3dad92fc9ca)  
+
+Kuvassa nähdään, että Kalilla on verkkoportissa `eth1` ip-osoitteena `192.168.66.4`. Täten oletin `192.168.66.2` olevan Metasploitaplen ip-osoite ja laitoin sen verkkoselaimeen.  
+![2024-04-13_17-39](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/c8278403-291f-456e-ba65-0026cac03352)
+
+Wiresharkilla huomasimme, että db_nmap lähettää ARP kyselyn jokaiseen `dhcp` serverin ip-osoitteeseen ja jonka `192.168.66.2` kuittaa.  
+![2024-04-13_17-42](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/0d256bb9-39ee-4ff5-9b03-8b7129ea8220)
+
+
