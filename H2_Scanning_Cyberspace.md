@@ -338,7 +338,7 @@ Etsinn kaikki maininnat Apachesta komennollq;
 $ grep -ir apache
 ```
 Grepin jälkeen on `-ir`.
-- i meinaa sitä, että grep ohittaa kirjainkoostumukset kuvioissa ja syöttö tiedoissa, jotta vain kirjaime, jotka eroavat vain kirjainkoon mukaan, vastaavat toisiaan
+- i meinaa sitä, että grep ohittaa kirjainkoostumukset kuvioissa ja syöttö tiedoissa, jotta vain kirjaimet, jotka eroavat vain kirjainkoon mukaan, vastaavat toisiaan
 - r (recursive) tekee sen, että grep lukee kaikki tiedostot jokaisesta hakemistosta rekursiivisesti.
 
 <details>
@@ -863,4 +863,13 @@ En saanut mistään kuvaa, koska nmap skannaus oli niin nopea, että en kerennyt
 - v/V Nostaa/laskee tarkkuustasoa, eli kuinka paljon tietoa skannauksen aikana skannauksesta näkyy
 - d/D Nostaa/laskee vianmääritystason tasoa
 - p/P Kytkee päälle/pois pakettien jäljityksen
-- ? Tulosta ajoajan vuorovaikutusohjeiden näyttö
+- ? Tulostaa ajoajan vuorovaikutusohjeiden näytön
+
+## Lähteet
+Antti Halonen [https://github.com/therealhalonen/penetration_testing/blob/master/h1/report.md](https://github.com/therealhalonen/penetration_testing/blob/master/h1/report.md)  
+db_nmap [https://gist.github.com/fabionoth/ba46407d9cd03144150225715697c47f](https://gist.github.com/fabionoth/ba46407d9cd03144150225715697c47f)  
+Kali linux [https://www.kali.org/get-kali/#kali-platforms](https://www.kali.org/get-kali/#kali-platforms)  
+man grep [https://man7.org/linux/man-pages/man1/grep.1.html](https://man7.org/linux/man-pages/man1/grep.1.html)  
+man nmap [https://linux.die.net/man/1/nmap](https://linux.die.net/man/1/nmap)  
+Metasploitable [https://sourceforge.net/projects/metasploitable/](https://sourceforge.net/projects/metasploitable/)  
+Tero Karvinen [https://terokarvinen.com/2024/eettinen-hakkerointi-2024/](https://terokarvinen.com/2024/eettinen-hakkerointi-2024/)  
