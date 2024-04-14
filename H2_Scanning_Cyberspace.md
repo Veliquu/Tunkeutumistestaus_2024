@@ -139,7 +139,7 @@ Näillä asetuksilla kumpikin kone on `DHCP` serverissä, mutta vain Kali pääs
 
 ### Osoita eri komennoilla, että Internet-yhteys katkeaa: 'ping 1.1.1.1', 'ping www.google.com', 'curl www.google.com'
 Metasploitablella kun pingataan `www.google.com` saadaan `unknown hos` viesti.  
-![2024-04-13_16-13](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/4e2938cc-be84-4e45-a60a-bcb1c768df7d)
+![2024-04-14_19-51](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/34e269a5-91ff-48eb-93e1-aa4063422793)
 
 Kalilla saadaan ensin pingillä yhteys googleen, mutta kun irroitin `Network Adapter 1` virtualiboxissa niin pingi ei mene enään läpi.  
 ![2024-04-13_17-14](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/f6eef9c4-a5dd-4792-848d-d3fa3538ec18)
