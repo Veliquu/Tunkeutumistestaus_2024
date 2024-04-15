@@ -315,7 +315,7 @@ msf6 > nmap -oA /home/nmaptulokset 192.168.66.2
 ```
 ![2024-04-13_23-21](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/a1d3e251-a56c-495d-9d22-9eb85558ae84)
 
-Tämän jälkeen tarkistin, että luotu tiedosto löytyy.
+Tämän jälkeen tarkistin, että luotu tiedosto löytyy.  
 ![2024-04-13_23-22](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/77f4c107-dcbd-43fd-b6ca-2b86ed144760)
 
 Täällä näemme, että tiedosto on luotu.
