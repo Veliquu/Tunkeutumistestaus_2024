@@ -300,24 +300,109 @@ $ wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip
 Kokeilin purkaa zip tiedoston, mutta se haluaa salasanan.  
 ![2024-04-23_19-14](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/dd8cbe16-cdd5-4700-ad43-ee5ca0376744)  
 Seuraavaksi kokeillaan purkaa salasanan tiivistelmä John the Ripperillä.
-Ensikis 
+Ensikis puretaan tiiviste tiedostosta.
+```bash
+$ ~/john/run/zip2john tero.zip > tero.zip.hash
+```
+![2024-04-28_20-37](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/e9a3ead6-08a4-4a96-be4e-b158bda80421)  
+
+Seuraavaksi murrettiin salasana.
+```bash
+$ ~/john/run/john tero.zip.hash
+```
+![2024-04-28_20-39](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/80b01d6e-b1f7-4564-8285-3784c358cb93)  
+Kuvasta nähdään murrettu salasana oranssilla.  
+Seuraavaksi avattiin ladattu zip tiedosto käyttämällä murrettua salasanaa.  
+Zip tiedosto saatiin purettua ja sieltä tullut SECRET.md tarkistettiin `catìn avulla.  
+![2024-04-28_20-45](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/08f9e726-b8d3-427c-b054-d51391149179)
+
 
 # d) Fuffme. Asenna [Ffufme harjoitusmaali](https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/) paikallisesti omalle koneellesi. Ratkaise tehtävät (kaikki paitsi ei "Content Discovery - Pipes")
-
+Asensin Ffufme harjoitusmaalin [sivuston](https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/) ohjeiden mukaisesti.  
+Asennuksen jälkeen kokeilin, että ffufme toimii.  
+![2024-04-28_20-54](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/7f02d559-d84d-4094-9ec6-353c9d02cd83)  
+  
+Asensin vielä tarvittavat kirjastot ja siirryin seuraavaan kohtaan.
+```bash
+virtualbox:~$ mkdir $HOME/wordlists
+virtualbox:~$ cd $HOME/wordlists
+virtualbox:~$ wget http://ffuf.me/wordlist/common.txt
+virtualbox:~$ wget http://ffuf.me/wordlist/parameters.txt 
+virtualbox:~$ wget http://ffuf.me/wordlist/subdomains.txt
+virtualbox:~$ cd -
+```
 ## Basic Content Discovery
+![2024-04-28_20-56](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/e6a041ee-544a-47df-a507-2350b321b8f3)  
 
+Ajoin tehtävässä annetun komennon lisäten siihen `-c` ja `-v`, jotta tulosta olisi helpompi tulkita. 
+- `-c` tekee väritetyn outputin
+- `-v` verbose, antaa tuloksessa enemmän tietoa  
+![2024-04-28_21-00](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/0c15f069-2123-4c95-85c6-d3774ccf2de9)  
+
+`class` ja `development.log` molemmat löytyivät.  
 ## Content Discovery With Recursion
+![2024-04-28_21-02](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/8b7ea07d-bbe7-4c4c-b56a-be58a57fdacf)  
+ 
+Ajoin taas annetun komennon lisäten `-c` ja `-v` helpommin tulkittavan tuloksen vuoksi.  
+![2024-04-28_21-03](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/3a1366da-1320-4bde-93d4-30abe58ecd6e)  
 
+Kuvasta näkee, että halutut asiat löytyivät. 
 ## Content Discovery With File Extensions
+![2024-04-28_21-07](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/1bfc66e6-1526-46ae-ba0c-d7c3a0831817)  
+ 
+Ajoin taas annetun komennon lisäten `-c` ja `-v` helpommin tulkittavan tuloksen vuoksi.  
+![2024-04-28_21-07_1](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/14e74be1-95e3-4f74-8890-cfbb2a79a65d)  
 
+Kuvasta näkee, että haluttu tiedosto löytyi.
 ## No 404 Status
+![2024-04-28_21-09](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/641ef9fa-e994-4b29-9aff-dd7832f48527)  
+
+Ajettiin tehtävän annon ensimmäinen komento lisäten `-c` ja `-v` helpommin tulkittavan tuloksen vuoksi.  
+Tämä antoi paljon tuloksia.  
+![2024-04-28_21-09_1](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/0f0c37b7-83b8-4d20-99c9-f0e4d925b7b0)  
+
+Kuten tehtävänannossa sanotaan, kaikki `Page Cannot Be Found` sivuilla on tiedostokoko `669`.  
+Ajoin siin seuraavan komennon lisäten `-fs 669` filtteröidäkseni pois kaikki tulokset minkä koko on `669`.  
+![2024-04-28_21-10](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/566fef85-b064-4147-8538-0c741c08c271)  
+
+Kuten tehtävänanto sanoo, tulokseksi jäi vain yksi tiedosto `secret`.
 
 ## Param Mining
+![2024-04-28_21-11](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/6f370329-4901-4236-b647-bc4e322a9774)  
 
+Kokeilin tehtävän annon `/cd/param/data` ja kuten tehtävänanto sanoi, sivu näytti vain `Required Parameters Missing`.  
+![2024-04-28_21-13](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/45d319c3-b5ba-4c48-8cb9-96ecfbef8875)  
+ 
+Ajoin annetun komennon lisäten `-c` ja `-v` helpommin tulkittavan tuloksen vuoksi.  
+![2024-04-28_21-11_1](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/04eb0c36-3f4d-4afa-8a7b-d833ce359b46)  
+
+Kuten tehtävän antoi kertoi, puuttuva parametri `debug` löytyi.  
 ## Rate Limited
+![2024-04-28_21-15](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/3b7cc716-9245-4c4b-a357-5fd895ab58a5)  
 
+Tehtävässä käytetään `-mc 200,429`. Tässä `-mc` näyttää vain http statukset `200` ja `429`  
+Ajoin annetun komennon lisäten `-c` ja `-v` helpommin tulkittavan tuloksen vuoksi. 
+![2024-04-28_21-16](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/12b6189c-27e3-4dad-afd4-41b3c43e69d6)  
+
+Tämä komento antoi pelkkää virhettä.  
+Seuraavaan komentoo lisättiin `-t 5` mikä lisää 5 ffuf versiota mikä tarkoittaa 50 requestia sekunnissa, ja `-p 0.1` mikä aiheuttaa 0.1 sekunin tauon per request.  
+Ajoin seuraavan komennon tehtävänannosta lisäten `-c` ja `-v`.  
+![2024-04-28_21-20](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/5144ff1d-a0ad-4cdc-b96d-5005752068d3)  
+
+Tämäkin antoi vain erroria. Huomasin, että komennossa ei käytetä URLina localhostia, joten ajoin komennon uusiksi käyttäen sitä.  
+![2024-04-28_21-24](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/15e1259c-d9c2-4dbd-b9f0-38bbcbf85b1e)  
+
+Enää ei saatu erroreita ja haluttu `oracle` tiedosto löytyi.  
 ## Subdomains - Virtual Host Enumeration
+![2024-04-28_21-25](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/2a73a2fd-ebf3-4807-868f-31dd67827833)  
 
+Ajoin tehtävänannon ensimmäisen komennon lisäten `-c` ja `-v`.  
+![2024-04-28_21-26](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/b197aa6e-4c56-45a2-b3f5-e06a6253c11f)  
+ 
+Tämä antoi paljon tuloksia, joiden kaikkien koko on `1495`. Jotta saisin nämä tulokset pois lisäsin ajamaani komentoon `-fs 1495`, joka filtteröi pois kaikki tulokset koolla `1495`.  
+![2024-04-28_21-26_1](https://github.com/Veliquu/Tunkeutumistestaus_2024/assets/92360351/ff8a81f2-a893-4f93-b6d9-b95620a1dcf7)  
+
+Kuten tehtävänanto kertoi, tämä antoi tuloksena `redhat` subdomainin.
 # e) Tee msfvenom-työkalulla haittaohjelma, joka soittaa kotiin (reverse shell). Ota yhteys vastaan metasploitin multi/handler -työkalulla.
 
 ## Haittaohjelma ei saa olla automaattisesti leviävä. Msfvenom tekee tunnilla opetelluilla asetuksilla ohjelman, joka avaa reverse shellin, kun sen ajaa, mutta joka ei leviä eikä tee muutenkaan mitään itsestään.
